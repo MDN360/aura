@@ -243,8 +243,8 @@
             <div class="line"></div>
         </div>
         <div class="comparison-container reveal">
-            <img src="./public/images/before.png" class="comparison-img img-before" alt="Clinical Case - Before">
-            <img src="./public/images/after.png" class="comparison-img img-after" alt="Clinical Case - After">
+            <img src="/images/before.png" class="comparison-img img-before" alt="Clinical Case - Before">
+            <img src="/images/after.png" class="comparison-img img-after" alt="Clinical Case - After">
             <div class="slider-handle"></div>
         </div>
     </section>
@@ -311,7 +311,7 @@
         const pl2 = new THREE.PointLight(0xC9A961, 55); pl2.position.set(-5, -5, 2); scene.add(pl2);
 
         let model, pivot;
-        new GLTFLoader().load('./public/models/molar.glb', (gltf) => {
+        new GLTFLoader().load('/models/molar.glb', (gltf) => {
             model = gltf.scene; pivot = new THREE.Group(); scene.add(pivot);
             model.traverse((child) => { if (child.isMesh) { child.material.roughness = 0.12; child.material.metalness = 0.22; child.material.emissiveIntensity = 0.03; } });
             const center = new THREE.Box3().setFromObject(model).getCenter(new THREE.Vector3());
